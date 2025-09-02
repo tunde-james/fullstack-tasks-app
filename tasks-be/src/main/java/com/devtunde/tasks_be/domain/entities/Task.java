@@ -51,15 +51,15 @@ public class Task {
     public Task() {
     }
 
-    public Task(UUID id, String title, String description, LocalDateTime dueDate, TaskPriority priority,
-            TaskList taskList, TaskStatus status, LocalDateTime created, LocalDateTime updated) {
+    public Task(UUID id, String title, String description, LocalDateTime dueDate, TaskStatus status,
+            TaskPriority priority, TaskList taskList, LocalDateTime created, LocalDateTime updated) {
+        this.taskList = taskList;
         this.id = id;
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.status = status;
         this.priority = priority;
-        this.taskList = taskList;
         this.created = created;
         this.updated = updated;
     }
@@ -104,7 +104,7 @@ public class Task {
         this.status = status;
     }
 
-    public TaskPriority gePriority() {
+    public TaskPriority getPriority() {
         return priority;
     }
 
@@ -146,8 +146,7 @@ public class Task {
         return Objects.equals(id, task.id) && Objects.equals(title, task.title)
                 && Objects.equals(description, task.description) && Objects.equals(dueDate, task.dueDate)
                 && status == task.status && priority == task.priority && Objects.equals(taskList, task.taskList)
-                && Objects.equals(created, task.created)
-                && Objects.equals(updated, task.updated);
+                && Objects.equals(created, task.created) && Objects.equals(updated, task.updated);
     }
 
     @Override
