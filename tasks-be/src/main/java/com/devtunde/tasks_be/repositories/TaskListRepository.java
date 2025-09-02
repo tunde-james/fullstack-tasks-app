@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.devtunde.tasks_be.domain.entities.TaskList;
 
 @Repository
-public interface TaskListRepositor extends JpaRepository<TaskList, UUID> {
+public interface TaskListRepository extends JpaRepository<TaskList, UUID> {
 
 }
