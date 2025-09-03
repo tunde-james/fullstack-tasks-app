@@ -6,5 +6,8 @@ import java.util.UUID;
 import com.devtunde.tasks_be.domain.entities.Task;
 
 public interface TaskService {
+
     List<Task> listTasks(UUID taskListId);
+
+    Task createTask(UUID taskListId, Task task);
 }
