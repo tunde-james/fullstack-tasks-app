@@ -15,4 +15,5 @@ services:
     # ⚠️ - Do not store plaintext passwords in source control. We
     #      do so here as this is a builder
     environment:
-      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}

@@ -1,1 +1,29 @@
-application.properties
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Spring Boot sensitive configs
+src/main/resources/application-local.properties
+src/main/resources/application-dev.properties
+src/main/resources/application-prod.properties
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Build files
+target/
+build/
+
+# Logs
+logs/
+*.log
+
+# React build
+/task-fe/build/
+/task-fe/dist/
+node_modules/
