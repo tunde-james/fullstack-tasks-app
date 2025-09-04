@@ -7,7 +7,6 @@
 
 # Spring Boot sensitive configs
 tasks-be/src/main/resources/application-local.properties
-tasks-be/src/main/resources/application-dev.properties
 
 # IDE files
 .vscode/
