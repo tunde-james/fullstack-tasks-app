@@ -12,6 +12,8 @@ import com.devtunde.tasks_be.domain.entities.TaskList;
 import com.devtunde.tasks_be.repositories.TaskListRepository;
 import com.devtunde.tasks_be.services.TaskListService;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class TaskListServiceImpl implements TaskListService {
 
@@ -53,6 +55,7 @@ public class TaskListServiceImpl implements TaskListService {
         return taskListRepository.findById(id);
     }
 
+    @Transactional
     @Override
     public TaskList updateTaskList(UUID taskListId, TaskList taskList) {
         if (null == taskList.getId()) {
